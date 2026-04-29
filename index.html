@@ -13,22 +13,36 @@
       <!-- icon/fontawosome cdn -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center ">
+<body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center ">
+
+    <!-- image -->
+     <div class="h-[130px] w-[300px] bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center">
+        <img src="./assets/Group.png" alt="">
+
+     </div>
+
 
     <!-- input from -->
    
     <form class="w-[350px] bg-white rounded-2xl p-8 ">
         <div>
             <label class="font-semibold" for="">Mobile Number</label> <br>
-            <input type="text" placeholder="Enter your number" class="input bg-[#F4F5F7] mt-3 rounded-3xl" />
+            <input type="text" placeholder="Enter your number" id="mobile-number" class="input bg-[#F4F5F7] mt-3 rounded-3xl" />
         </div>
         <div class="mt-5">
             <label class="font-semibold" for="">4 Digit pin</label> <br>
-            <input type="text" placeholder="Enter 4 digit pin" class="input bg-[#F4F5F7] mt-3 rounded-3xl" />
+            <input type="text" placeholder="Enter 4 digit pin" id="pin-number" class="input bg-[#F4F5F7] mt-3 rounded-3xl" />
         </div>
 
-        <button class="btn bg-[#0874F2] text-white font-bold mt-5 w-full rounded-3xl">Login</button>
+        <button class="btn bg-[#0874F2] text-white font-bold mt-5 w-full rounded-3xl" id="loginButton">Login</button>
     </form>
+
     
+
+    <!-- javascript -->
+
+<script src="./index.js"></script>
+
+
 </body>
 </html>
