@@ -44,19 +44,19 @@
     <img src="./assets/send1.png" class="mx-auto" alt="">
     <h1>Cashout</h1>
 </div>
-<div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+<div id="transfer-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
     <img src="./assets/money1.png" class="mx-auto" alt="">
     <h1>Transfer Money</h1>
 </div>
-<div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+<div id="bonus-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
     <img src="./assets/bonus1.png" class="mx-auto" alt="">
     <h1>Get Bonus</h1>
 </div>
-<div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+<div id="bil-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
     <img src="./assets/purse1.png" class="mx-auto" alt="">
     <h1>Pay Bill</h1>
 </div>
-<div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+<div id="transaction-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
     <img src="./assets/transaction1.png" class="mx-auto" alt="">
     <h1>Transactions</h1>
 </div>
@@ -68,7 +68,7 @@
     <!-- from fild -->
      <div class="all-from-sections max-w-lg mx-auto">
         <!-- add money from -->
-         <div id="add-money-parent">
+         <div class="form" id="add-money-parent">
             <h1 class="my-5 font-bold">Add Money</h1>
             <form action="" class="bg-white rounded-2xl p-8">
                 <div class="mb-3">
@@ -95,7 +95,7 @@
          </div>
 
          <!-- cashout from -->
-          <div id="cash-out-parent" style="display: none;">
+          <div class="form" id="cash-out-parent" style="display: none;">
             <h1 class="my-5 font-bold">Cash out</h1>
             <form action="" class="bg-white rounded-2xl p-8">
                 
@@ -113,6 +113,26 @@
             </form>
 
           </div>
+          <!-- transfer money -->
+           <div class="form" id="transfer-money-parent" style="display: none;">
+            <h1 class="my-5 font-bold">Transfer Money</h1>
+
+           </div>
+           <!-- get bonus -->
+            <div class="form" id="get-bonus-money-parent" style="display: none;">
+            <h1 class="my-5 font-bold">Get bonus</h1>
+
+           </div>
+           <!-- pay bil -->
+            <div class="form" id="pay-bil-money-parent" style="display: none;">
+            <h1 class="my-5 font-bold">Pay Bil</h1>
+
+           </div>
+           <!-- transaction -->
+            <div class="form" id="transaction-money-parent" style="display: none;">
+            <h1 class="my-5 font-bold">Transaction Money</h1>
+
+           </div>
 
      </div>
 
