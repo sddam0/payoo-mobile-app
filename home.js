@@ -1,3 +1,5 @@
+
+// add money feature
 const validPin = 1234
 
 document.getElementById("add-money-btn").addEventListener("click",function(e){
@@ -25,6 +27,18 @@ document.getElementById("add-money-btn").addEventListener("click",function(e){
     
     
 })
+
+// cashout feture
+
+document.getElementById("withdraw-btn").addEventListener("click",function(e){
+    e.preventDefault()
+    const amount = parseInt(document.getElementById("withdraw-amount").value)
+    const avilableBalance = parseInt( document.getElementById("avilable-blance").innerText)
+    const totalNewAvilableBalance = avilableBalance - amount
+    document.getElementById("avilable-blance").innerText = totalNewAvilableBalance
+})
+
+
 
 // toggling features
 
