@@ -36,11 +36,11 @@
 
     <div class="min-h-[200px] grid grid-cols-3 gap-4 p-3">
 
-<div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+<div id="add-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
     <img src="./assets/wallet1.png" class="mx-auto" alt="">
     <h1>Add Money</h1>
 </div>
-<div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+<div id="cash-out-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
     <img src="./assets/send1.png" class="mx-auto" alt="">
     <h1>Cashout</h1>
 </div>
@@ -68,7 +68,7 @@
     <!-- from fild -->
      <div class="all-from-sections max-w-lg mx-auto">
         <!-- add money from -->
-         <div>
+         <div id="add-money-parent">
             <h1 class="my-5 font-bold">Add Money</h1>
             <form action="" class="bg-white rounded-2xl p-8">
                 <div class="mb-3">
@@ -93,6 +93,11 @@
                 <button id="add-money-btn" class="btn bg-[#0874F2] text-white font-bold mt-5 w-full rounded-3xl">Add Money</button>
             </form>
          </div>
+
+         <!-- cashout from -->
+          <div id="cash-out-parent" style="display: none;">
+            <h1 class="my-5 font-bold">Cash out</h1>
+          </div>
 
      </div>
 
