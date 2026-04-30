@@ -64,7 +64,7 @@ document.getElementById("add-money-btn").addEventListener("click",function(e){
     setInnerText(totalNewAvilableBalance)
 
     const data = {
-        name:"Add Money"
+        name:"Add Money",
         date:new Date().toLocaleTimeString()
     }
     
@@ -116,7 +116,7 @@ document.getElementById("withdraw-btn").addEventListener("click",function(e){
     setInnerText(totalNewAvilableBalance)
 
     const data = {
-        name:"Cash Out"
+        name:"Cash Out",
         date:new Date().toLocaleTimeString()
     }
     
@@ -139,7 +139,7 @@ document.getElementById("transaction-button").addEventListener("click",function(
                 </div>
                 <div class="ml-3">
                     <h1>${data.name}</h1>
-                    <p>{data.date}</p>
+                    <p>${data.date}</p>
                 </div>
             </div>
             <i class="fa-solid fa-ellipsis-vertical"></i>
