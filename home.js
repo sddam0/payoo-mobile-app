@@ -1,6 +1,7 @@
 
 // add money feature
 const validPin = 1234
+const transactionData = []
 
 // function to get input values (reuse function create)
 function getInputValueNumber (id){
@@ -32,13 +33,18 @@ function setInnerText(value){
 const avilableBalanceElement = document.getElementById("avilable-blance")
 avilableBalanceElement.innerText = value
 }
-
+// add money 
 document.getElementById("add-money-btn").addEventListener("click",function(e){
     e.preventDefault()
     console.log("add")
     const bank = getInputValue ("bank");
     const accountNumber = document.getElementById("account-number").value 
     const amount = getInputValueNumber("add-amount")
+
+    if(amount<=0){
+        alert("Invalid amount")
+        return;
+    }
     
     const pin = getInputValueNumber("add-pin")
     const avilableBalance = getInnerText ("avilable-blance")
@@ -56,7 +62,13 @@ document.getElementById("add-money-btn").addEventListener("click",function(e){
     const totalNewAvilableBalance = amount+avilableBalance
 
     setInnerText(totalNewAvilableBalance)
+
+    const data = {
+        name:"Add Money"
+        date:new Date().toLocaleTimeString()
+    }
     
+    transactionData.push(data)
     
     
 })
@@ -92,11 +104,53 @@ function handleButtonToggle(id){
 document.getElementById("withdraw-btn").addEventListener("click",function(e){
     e.preventDefault()
     const amount = getInputValueNumber("withdraw-amount")
+
     const avilableBalance = getInnerText ("avilable-blance")
+
+    if(amount<=0 || amount>avilableBalance){
+        alert("Invalid amount")
+        return;
+    }
+
     const totalNewAvilableBalance = avilableBalance - amount
     setInnerText(totalNewAvilableBalance)
+
+    const data = {
+        name:"Cash Out"
+        date:new Date().toLocaleTimeString()
+    }
+    
+    transactionData.push(data)
 })
 
+//  transaction history 
+
+document.getElementById("transaction-button").addEventListener("click",function(){
+    const TransactionContainer = document.getElementById("transaction-container")
+    TransactionContainer.innerText = ""
+
+    for(const data of transactionData){
+        const div = document.createElement("div")
+        div.innerHTML=`
+        <div class="bg-white rounded-xl p-3 flex justify-between items-center mt-3">
+            <div class="flex items-center">
+                <div class="p-3 rounded-full bg-[#f4f5f7]">
+                    <img src="./assets/wallet1.png" alt="">
+                </div>
+                <div class="ml-3">
+                    <h1>${data.name}</h1>
+                    <p>{data.date}</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+           </div>
+        `
+
+        TransactionContainer.appendChild(div)
+
+    }
+})
 
 
 // toggling features
